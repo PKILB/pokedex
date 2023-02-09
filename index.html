@@ -23,16 +23,16 @@
           loading="lazy">
         <span class="ms-2">Pokedex</span>
       </a>
-      <button class="btn btn-wild btn-large">Wild</button>
+      <button class="btn btn-wild btn-large" data-bs-toggle="offcanvas" data-bs-target="#pokemon-offcanvas">Wild</button>
       <div class="text-end flex-grow-1 me-5">
-        <button class="btn btn-caught btn-large ms-5">Caught</button>
+        <button class="btn btn-caught btn-large ms-5" data-bs-toggle="offcanvas" data-bs-target="#sandbox-offcanvas">Caught</button>
       </div>
     </nav>
   </header>
   <main class="bg-image">
     <div class="container">
       <div class="row my-5" id="wild">
-        <div class="col-10 m-auto">
+        <!-- <div class="col-10 m-auto">
           <div class="row m-auto p-4 bg-light rounded elevation-2 border border-danger border-2 text-center">
             <div>
               <h1 class="fs-3">Bulbasaur</h1>
@@ -50,9 +50,14 @@
             <span class="col-6 text-end">
               <h1 class="fs-5">Weight: </h1>
             </span>
-            <h1 class="fs-5">Type: </h1>
+            <span class="text-start">
+              <h1 class="fs-5">Type: </h1>
+            </span>
+            <div class="text-end">
+              <button class="btn btn-outline-danger">Catch!</button>
+            </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </main>
@@ -61,6 +66,42 @@
       <!-- <p><small>Made with 💖 by CodeWorks</small></p> -->
     </div>
   </footer>
+
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="pokemon-offcanvas" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="container-fluid">
+        <div class="row" id="wild-pokemon">
+          <!-- <div class="col-12 text-center">
+            <button class="btn btn-outline-danger w-100 fw-bold">Bulbasaur</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="sandbox-offcanvas" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel"><span id="pokemon count">0</span> / 5</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="container-fluid">
+        <div class="row" id="my-pokemon">
+          <!-- <div class="col-12 text-center">
+            <button class="btn btn-outline-danger w-100 fw-bold">Acid Arrow</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
