@@ -44,7 +44,7 @@ get BigActivePokemonTemplate() {
     static PokemonListTemplate(pokemon) {
         return  /*html*/`
         <div class="col-12 text-center">
-            <button onclick="app.pokemonsController.getPokemonByIndex('${pokemon.index}')" class="mb-3 btn btn-outline-danger w-100 fw-bold">${pokemon.name}</button>
+            <button onclick="app.pokemonsController.getPokemonByIndex('${pokemon.name}')" class="mb-3 btn btn-outline-danger w-100 fw-bold">${pokemon.name}</button>
           </div>
         `
     }
